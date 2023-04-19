@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+@keyframes color {
+  0% {
+    background: #501c68;
+  }
+  20% {
+    background: #542c65;
+  }
+  40% {
+    background: #420e4b;
+  }
+  60% {
+    background: #47225b;
+  }
+  80% {
+    background: #561a72;
+  }
+  100% {
+    background: rgb(70, 27, 82);
+  }
+}
+body {
+  animation: color 10s infinite linear;
+  width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(70, 27, 82);
+}
+nav {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(54, 21, 68);
+}
+.container {
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: left;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 60px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: rgb(177, 177, 224);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+nav img {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 50px;
+}
+.text-box p {
+  margin: 10px 0 20px;
+  font-size: 28px;
+  color: white;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 40px;
+  font-size: 20px;
+  background: rgb(63, 16, 81);
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0.3em 0.3em 5px rgba(37, 37, 37, 0.5);
+  cursor: pointer;
+}
+.hero-btn:hover {
+  border: 1px solid rgb(73, 16, 73);
+  background-color: rgb(147, 66, 179);
+  transition: 1.5s;
+}
+.supra {
+  position: absolute;
+  right: 15px;
+  bottom: 0px;
+}
+
+#active_link {
+  font-weight: 700;
+}
+
+@media (max-width: 1080px) {
+  nav{
+   background-color: rgba(190, 84, 219, 0.0);
+  }
+   ul {
+     display: flex;
+     flex-direction: column;
+ 
+   }
+ 
+   nav {
+     display: block;
+   
+   }
+   
+   .nav-links ul li {
+     list-style: none;
+     display: inline-block;
+     padding: 8px 0px;
+     text-align: right;
+     position: relative;
+ }
+ .text-box h1 {
+   margin-top: 100px;
+   font-size: 40px;
+ }
+ .text-box p {
+   font-size: 20px;
+ }
+ .supra {
+ 
+   right: 10px;
+   width: 350px;
+   height: 250px;
+ }
+ }
+ 

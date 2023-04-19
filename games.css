@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(70, 27, 82);
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(54, 21, 68);
+}
+.container {
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: left;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 60px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: rgb(177, 177, 224);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+#active_link {
+  font-weight: 700;
+}
+.games h1 {
+  text-align: center;
+  color: white;
+  left: 37%;
+  margin-top: 35px;
+  font-weight: 500;
+}
+.games-col {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rows {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 65px;
+}
+.games-col h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.games-col p {
+  text-align: center;
+  width: 400px;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: justify;
+}
+.games-col img {
+  border-radius: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgb(28, 28, 28);
+}
+.bg-text-container {
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 60px;
+  position: absolute;
+  z-index: -999;
+}
+.animate-text {
+  animation: text-scrolling 100s linear infinite;
+  will-change: transform;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+.animate-text .left {
+  animation-direction: reverse;
+}
+span {
+  font-size: 300px;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(165, 142, 173, 0.203);
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 0.75;
+  min-width: auto;
+  font-weight: 800;
+  transform: skewY(-1deg);
+}
+@keyframes text-scrolling {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+ @media (max-width: 1200px) {
+  .games-col {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
+  .games-col p{
+    width: 300px;
+  }
+  .games-col h3{
+    width: 300px;
+  }
+  .games-col img{
+    width: 300px;
+    height: 200px;
+  }
+  .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 40px;
+      position: relative;
+  }
+ }
+ 
+@media (max-width: 900px) {
+  .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 20px;
+      position: relative;
+  }
+  .games-col {
+    margin-bottom: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .games-col p{
+    width: 600px;
+  }
+  .games-col h3{
+    width: 600px;
+  }
+  .games-col img{
+    width: 600px;
+    height: 400px;
+  }
+  .rows {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 65px;
+  }
+ }
+ @media (max-width: 600px) {
+  nav{
+   background-color: rgba(190, 84, 219, 0.0);
+  }
+   ul {
+     display: flex;
+     flex-direction: column;
+ 
+   }
+   nav {
+     display: block;
+   
+   }
+   .nav-links ul li {
+     list-style: none;
+     display: inline-block;
+     padding: 8px 0px;
+     text-align: right;
+     position: relative;
+ }
+ .games-col {
+  margin-bottom: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.games-col p{
+  width: 90%;
+}
+.games-col h3{
+  width: 90%;
+}
+.games-col img{
+  width: 280px;
+  height: 60%;  
+}
+.rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 65px;
+}
+ }
